@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task Planner</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Task Planner</h1>
+        <form id="task-form">
+            <div>
+                <label for="activity-input">Activity name</label><br>
+                <input type="text" id="activity-input" placeholder="Ex:Task1"><br>
+                <span class="error" id="activity-input-error"></span>
+            </div>
+            <div>
+                <label for="start-date-input">Start Date</label><br>
+                <input type="date" id="start-date-input"><br>
+                <span class="error" id="start-date-input-error"></span>
+            </div>
+            <div>
+                <label for="end-date-input">End Date</label><br>
+                <input type="date" id="end-date-input"><br>
+                <span class="error" id="end-date-input-error"></span>
+            </div>
+            <div>
+                <label for="status-select">Status</label><br>
+                <select id="status-select">
+                    <option value="" selected disabled hidden>Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="In-Progress">In-Progress</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Due-Passed">Due Passed</option>
+                </select><br>
+                <span class="error" id="status-select-error"></span>
+            </div>
+
+            <div><br>
+                <input type="submit" value="Add">
+            </div>
+        </form>
+        <div class="task-list-bar">
+            <h2 class="task-list-h1">Task List</h2>
+            <div><input type="text" id="search-input" placeholder="Search">
+            <i class="search-icon"></i></div>
+        </div>
+        
+
+        
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="edit-form-container" class="modal">
+        
+        <div class="modal-content">
+            <div class="edit-heading">
+                <h2 class="task-edit-h2">Task Edit</h2>
+            </div>
+            
+            <form id="edit-form">
+                <div class="ediv">
+                    <label for="edit-activity-input">Activity</label><br>
+                    <input type="text" id="edit-activity-input"  required>
+                    <span class="error" id="activity-einput-error"></span>
+                </div>
+                <div class="ediv"> 
+                    <label for="edit-start-date-inputt">Start Date</label><br>
+                    <input type="date" id="edit-start-date-input" required><br>
+                    <span class="error" id="start-date-einput-error"></span>
+                </div>
+
+                <div class="ediv"> 
+                    <label for="edit-end-date-input">End Date</label><br>
+                    <input type="date" id="edit-end-date-input" required><br>
+                    <span class="error" id="end-date-einput-error"></span>
+                </div>
+                <div class="ediv status">
+                    <label for="edit-status-select">Status</label><br>
+                     <select id="edit-status-select">
+                        <option value="Status" selected disabled hidden>Status</option>
+                        <option value="Pending">Pending</option>
+                        <option value="In-Progress">In-Progress</option>
+                        <option value="Completed">Completed</option>
+
+                        <option value="Due-Passed">Due Passed</option>
+                    </select><br>
+                    <span class="error" id="status-eselect-error"></span>
+                </div>
+                <div class="ediv btn">
+
+                    <button type="cancel" onclick="closeEditForm()" class="cancel-btn">Cancel</button>
+                    <button type="submit" onclick="updateRecord()" class="submit-btn">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

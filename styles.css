@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/* Styles for the task planner */
+html,body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+  
+  h1 {
+    text-align: start;
+    margin-bottom: 20px;
+  }
+  .task-list-h1{
+    text-align: start;
+  }
+  
+
+.task-list-bar{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  
+}
+#search-input {
+  margin-right: 20px;
+  height: 20px;
+  width: 340px;
+}
+
+label{
+  padding-left: 4px;
+font-size: 16px;
+color: rgb(73, 72, 72);
+}
+
+.search-icon{
+  opacity: 40%;
+  position: absolute;
+  background: url(images/search_icon.png);
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  
+  padding: 16px;
+  right: 4%;
+  scale: 70%;
+}
+
+  form {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    align-items: baseline;
+  }
+
+  
+  input[type="text"],
+  input[type="date"],
+  select {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+
+.error{
+    font-size: 12px;
+    color: red;
+}
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    margin-top: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover{
+    background-color: #3d8f3f;
+  }
+  
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    padding: 14px;
+    background-color: #e6dfdf;
+    font-weight: bold;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .actions button {
+    padding: 5px 10px;
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  select,option{
+    
+    height: auto;
+  padding-left: 16px;
+    color: black;
+    
+    border-radius: 5px  ;
+    margin-bottom: 4px;    
+     
+ 
+}
+  .actions button:hover {
+    background-color: #ccc;
+  }
+  
+  .modal {
+    display: none;
+    
+  }
+  
+  .modal-content {
+    
+    border: 1px solid black;
+    width: 20%;
+    height: auto;
+    padding: 40px 40px 30px 40px;
+    position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+    
+    background-color: aliceblue;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #555;
+  }
+  
+  .modal form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+  }
+  
+  .modal input[type="text"],
+  .modal input[type="date"],
+  .modal select {
+    width: 100%;
+  }
+  
+  
+  
+.modal-content button{
+ 
+  padding: 10px 20px;
+    
+    width: 100%;
+    margin: 5px;
+ 
+}
+.ediv {
+  width: 92%;
+  
+}
+
+
+.edit{
+  
+  margin: 4px;
+    font-size: 14px;
+    padding: 8px 18px 8px 18px;
+  background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.delete{
+  
+  margin: 4px;
+    font-size: 14px;
+    padding: 8px 16px 8px 16px;
+  background-color: red;
+    border: 1px solid red;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+.delete:hover{
+  background-color: rgb(202, 5, 5);
+}
+
+.status{
+  width: 100%;
+}
+
+.task-edit-h2{
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.modal-content .cancel-btn{
+
+background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+}
+.cancel-btn:hover,
+.edit:hover{
+  background-color: rgb(236, 235, 235);
+}
+
+.modal-content .submit-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  width: 100%;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.submit-btn:hover{
+  background-color: #3d8f3f;
+}
+.btn{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+}
